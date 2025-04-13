@@ -1,6 +1,6 @@
 # Fake Yiban: 不一般的易班
 
-# [Start]
+# [Start]https://just-it-o.github.io/gongyi/
 
 WARNING: This program is only used for demonstration and should not be abused. Use it at your own risk.
 
