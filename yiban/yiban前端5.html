@@ -15,7 +15,7 @@
     <div id="sub-root">
         <div class="hx-layout">
             <main class="hx-content">
-                <div class="nav-bar" style="background-color: rgb(108, 176, 249); color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center;"><div style="display: flex; align-items: center; gap: 1em;"><span class="back-arrow" style="font-size: 2em; cursor: pointer; vertical-align: middle;" onclick="window.location.href='yiban前端3.html'">＜</span><span style="font-size: 1.8em; cursor: pointer; vertical-align: middle;">x</span></div><div style="display: flex; align-items: center; justify-content: center; width: 100%; font-size: 1em; text-align: center;"><span id="studentName"></span></div><div><span class="more-options">…</span></div></div><div class="wfTitle___Y-ebx" style="text-align: center; font-size: 1.2em; margin-top: 0.5em;"><span id="studentName"></span></div>
+                <div class="nav-bar" style="background-color: rgb(108, 176, 249); color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center;"><div style="display: flex; align-items: center; gap: 1em;"><span class="back-arrow" style="font-size: 1.8em; cursor: pointer; vertical-align: middle;" onclick="window.location.href='yiban前端3.html'">＜</span><span style="font-size: 1.5em; cursor: pointer; vertical-align: middle;">x</span></div><div style="display: flex; align-items: center; justify-content: center; width: 100%; font-size: 1.5em; text-align: center; margin-top: -0.2em;"><span id="studentName"></span></div><div><span class="more-options">…</span></div></div><div class="wfTitle___Y-ebx" style="text-align: center; font-size: 1.5em; margin-top: 0.5em;"><span id="studentName"></span></div>
                 <div class="hx-detail">
                     <div class="hx-detail-group">
                         <div class="hx-title-detail">
@@ -66,7 +66,7 @@
                 </div>
             </main>
             <div class="hx-footer" style="width: 100%; text-align: center;">
-                <a role="button" class="am-button hx-footer_btn" style="color: rgb(108, 176, 249); width: 90%; max-width: 600px; margin: 0 auto;" aria-disabled="false"><span>转发审批表单</span></a>
+                <button class="am-button hx-footer_btn" style="color: rgb(108, 176, 249); width: 100%; max-width: 600px; margin: 0 auto;">转发审批表单</button>
             </div>
         </div>
         <div class="approval-stamp">
@@ -187,18 +187,6 @@ document.querySelector('.wfTitle___Y-ebx span').textContent = nameFromStorage + 
             approversContainer.appendChild(endDiv);
         } else {
             document.getElementById('approversSection').style.display = 'none';
-        }
-
-        // 渲染抄送信息
-        if (data.ccs.length > 0) {
-            const ccsContainer = document.getElementById('ccsContainer');
-            data.ccs.forEach(cc => {
-                const ccDiv = document.createElement('div');
-                ccDiv.textContent = `${cc.name}(${cc.id})`;
-                ccsContainer.appendChild(ccDiv);
-            });
-        } else {
-            document.getElementById('ccsSection').style.display = 'none';
         }
     </script>
 </body>
